@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap" rel="stylesheet">
+    <title>WORD</title>
+</head>
+<body onload="getRandomWord()">
+    <div class="title">英文單字練習</div>
+
+    <div class="container">
+    <div class="card">
+        
+    <div class="frontcard">
+    <div id="wordDisplay"></div>
+    
+    </div>
+    
+    <div class="backcard"><div id="ChineseDisplay"></div></div>
+    </div>
+    </div>
+
+    <div class="button-container">
+    <a href="saved.html" class="gotobtn">查看已記錄單字</a>
+    <button onclick="saveWord()" class="savebtn">記錄單字</button>
+    <button onclick="getRandomWord()" class="genbtn">隨機單字</button>
+    </div>
+
+    <script src="script.js">
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelector('.card').addEventListener('click', function() {
+            this.classList.toggle('flipped'); 
+        });
+    });</script>
+</body>
+</html>
